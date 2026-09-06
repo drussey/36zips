@@ -108,6 +108,9 @@ main { position: relative; z-index: 1; max-width: 1500px; margin: 0 auto; paddin
 
 /* the map panel is the water: deep wine-red felt, same grain */
 .map-panel {
+  /* the panel stretches to the timeline's height: let the slack sit above the map so the
+     worldwide inset and the hint end up in the panel's bottom-left corner */
+  display: flex; flex-direction: column;
   background:
     radial-gradient(ellipse at 20% 0%, rgba(110,18,62,.26), transparent 50%),
     radial-gradient(ellipse at 90% 100%, rgba(60,8,45,.28), transparent 50%),
@@ -124,7 +127,8 @@ main { position: relative; z-index: 1; max-width: 1500px; margin: 0 auto; paddin
 }
 .panel-sub, .panel-foot { color: var(--muted); font-size: 13px; letter-spacing: .04em; margin: 0; }
 .panel-foot { margin-top: 6px; text-transform: uppercase; font-size: 12px; }
-.map-panel .panel-foot { margin-top: 22px; }
+.map-panel .map-wrap { margin-top: auto; }
+.map-panel .panel-foot { margin-top: 14px; }
 .unodc-foot { text-transform: none; font-size: 11px; line-height: 1.4; letter-spacing: .02em; color: #8f8a78; }
 
 .legend { display: flex; align-items: center; gap: 10px; font-family: "Anton", Impact, sans-serif; font-size: 12px; letter-spacing: .12em; color: var(--gold-hi); }
