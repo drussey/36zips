@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>36 Zips — The Price of a Kilo According to Rap</title>
+<meta name="description" content="Every price a rapper has put on a kilo, 1992–2026, sourced from Genius lyrics and mapped by hometown.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Pirata+One&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="presents">The Rap Kilo Index presents</p>
+    <svg class="wordmark" viewBox="0 0 900 232" role="img" aria-label="36 Zips — the price of a kilo">
+      <defs>
+        <linearGradient id="wmGreen" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#eaffcf"/><stop offset=".33" stop-color="#8bf53f"/>
+          <stop offset=".5" stop-color="#3fbf07"/><stop offset=".6" stop-color="#a6ff5c"/>
+          <stop offset="1" stop-color="#1c7000"/>
+        </linearGradient>
+        <linearGradient id="wmViolet" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f0d9ff"/><stop offset=".33" stop-color="#b464ff"/>
+          <stop offset=".5" stop-color="#7a1fc9"/><stop offset=".6" stop-color="#c98cff"/>
+          <stop offset="1" stop-color="#450c80"/>
+        </linearGradient>
+      </defs>
+      <text class="wm-ext green" x="450" y="118">36 ZIPS</text>
+      <text class="wm-top green" x="450" y="110">36 ZIPS</text>
+      <text class="wm-ext violet" x="450" y="205">THE PRICE OF A KILO</text>
+      <text class="wm-top violet" x="450" y="199">THE PRICE OF A KILO</text>
+    </svg>
+  </div>
+  <p class="note-line">According to rap. <span id="dek"></span></p>
+</header>
+
+<main>
+  <section class="panel map-panel">
+    <div class="panel-head">
+      <div class="legend" id="legend">
+        <span class="legend-label">CHEAP</span>
+        <span class="legend-bar"></span>
+        <span class="legend-label">STEEP</span>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <svg id="map" role="img" aria-label="Map of the United States with a dot for each rap lyric that prices a kilo, placed by the rapper's home city"></svg>
+    </div>
+    <p class="panel-foot">Hover a dot. Click to pin it.</p>
+  </section>
+
+  <section class="panel time-panel">
+    <div class="time-wrap">
+      <svg id="timeline" role="img" aria-label="Price of a kilo by year, one dot per lyric, over a dashed line showing the UNODC average US wholesale price"></svg>
+    </div>
+    <p class="panel-foot unodc-foot">Dashed line: average US wholesale price of a kilo, <a href="https://www.unodc.org/unodc/en/data-and-analysis/world-drug-report-2026-annex.html" target="_blank" rel="noopener">UNODC World Drug Report</a> annex 8.3, 1990&ndash;2021</p>
+  </section>
+
+  <section class="panel about-panel">
+    <p class="about-links">Data: <a href="../data/kilo_prices.csv">csv</a> · <a href="../data/kilo_prices.json">json</a> · <a href="../README.md">how it was built</a> · <a href="mailto:bricks@russey.dad?subject=Missed%20lyric">Suggest a missed lyric</a></p>
+  </section>
+</main>
+
+
+
+<div id="card" class="card" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

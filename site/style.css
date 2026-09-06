@@ -1,0 +1,304 @@
+/* 36 ZIPS — Pen & Pixel energy: black velvet, gold bevels, chrome, money green. */
+
+:root {
+  --ink: #050705;
+  --felt: #0b1a0f;
+  --felt-2: #10261a;
+  --gold: #e6b422;
+  --gold-hi: #fff2b3;
+  --gold-lo: #7a4f00;
+  --chrome-hi: #ffffff;
+  --chrome-mid: #9aa3a8;
+  --chrome-lo: #3a4146;
+  --paper: #f1e9d2;
+  --muted: #b8b39c;
+  --red: #e8102a;
+  --dot-r: 4.6;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--paper);
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(230,180,34,.16), transparent 55%),
+    linear-gradient(rgba(3,8,4,.62), rgba(3,8,4,.62)),
+    url("img/bg.jpg") center / cover no-repeat var(--ink);
+  background-attachment: fixed;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted var(--gold-lo); }
+a:hover { color: var(--gold-hi); border-bottom-color: var(--gold-hi); }
+
+/* chrome text: silver bevel */
+.chrome {
+  background: linear-gradient(180deg, #fff 0%, #dfe4e7 35%, #6e767b 50%, #f4f6f7 55%, #8d959a 75%, #ffffff 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 1px 0 #000) drop-shadow(0 2px 3px rgba(0,0,0,.8));
+  letter-spacing: .14em;
+}
+
+/* ---------- masthead ---------- */
+.masthead { position: relative; z-index: 1; padding: 22px 16px 2px; text-align: center; }
+.note-line { margin: 0; display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: 15px; letter-spacing: .06em; }
+.note-line .tag { padding-top: 4px; }
+
+/* the title: a 2007 mixtape-cover wordmark, scaled down to a lockup.
+   Blackletter face in gold, black stroke, 3D extrusion and slime-green glow.
+   The element is the back layer (stroke + shadows); ::before carries the gradient face above it, because
+   text-shadow bleeds through a background-clip:text face while a stacked layer does not. Needs data-text. */
+.t-bevel {
+  --face: linear-gradient(180deg, #fff8d6 0%, #ffe680 24%, #b8860b 50%, #ffe27a 56%, #a86f00 100%);
+  --edge: #3b2400;
+  --glow: rgba(0,0,0,.6);
+  --stroke: 3px;
+  --depth: 3px;
+  position: relative; display: inline-block; z-index: 0;
+  font-family: "Pirata One", "Old English Text MT", serif; font-weight: 400; line-height: 1; white-space: nowrap; letter-spacing: .01em;
+  color: #000; -webkit-text-stroke: var(--stroke) #000; paint-order: stroke fill;
+  text-shadow:
+    1px 1px 0 var(--edge), 2px 2px 0 var(--edge), var(--depth) var(--depth) 0 #000,
+    calc(var(--depth) + 2px) calc(var(--depth) + 4px) 8px rgba(0,0,0,.85),
+    0 0 10px var(--glow), 0 0 24px var(--glow);
+}
+.t-bevel::before, .t-bevel::after {
+  content: attr(data-text); position: absolute; inset: 0; padding: inherit; box-sizing: border-box; pointer-events: none;
+  -webkit-text-stroke: 0; text-shadow: none;
+}
+.t-bevel::before { z-index: 1; background: var(--face); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.t-bevel::after {
+  z-index: 2; -webkit-text-stroke: 1px rgba(255,255,255,.6); color: transparent; transform: translate(-1px,-1px);
+  -webkit-mask: linear-gradient(135deg, #000 30%, transparent 60%); mask: linear-gradient(135deg, #000 30%, transparent 60%);
+}
+.title { font-size: 42px; --stroke: 2.5px; --depth: 3px; padding: 6px 10px 8px 6px; transform: rotate(-2deg); transform-origin: 50% 70%; }
+.masthead-inner { position: relative; max-width: 1180px; margin: 0 auto; padding: 8px 0 22px; }
+
+
+
+/* ---------- panels ---------- */
+main { position: relative; z-index: 1; max-width: 1500px; margin: 0 auto; padding: 18px 12px 30px; }
+@media (min-width: 1000px) {
+  body { zoom: 1.1; }
+  main { display: grid; grid-template-columns: minmax(0, 62fr) minmax(300px, 38fr); gap: 0 18px; align-items: stretch; }
+  .about-panel { grid-column: 1 / -1; }
+  .time-panel { display: flex; flex-direction: column; }
+  .time-wrap { flex: 1; min-height: 0; display: flex; }
+  #timeline { height: 100%; width: 100%; }
+}
+.panel {
+  position: relative; margin: 0 0 26px; padding: 14px 16px 12px;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(40,110,60,.35), transparent 50%),
+    radial-gradient(ellipse at 90% 100%, rgba(20,70,40,.35), transparent 50%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.012 .02' numOctaves='3' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55  0 0 0 0 .8  0 0 0 0 .6  0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>"),
+    linear-gradient(180deg, var(--felt-2), var(--felt));
+  background-blend-mode: normal, normal, soft-light, normal;
+  border: 5px ridge var(--gold);
+  outline: 2px solid #000;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,235,160,.35),
+    inset 0 0 40px rgba(0,0,0,.6),
+    0 10px 30px rgba(0,0,0,.8);
+}
+
+/* the map panel is the water: deep wine-red felt, same grain */
+.map-panel {
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(110,18,62,.26), transparent 50%),
+    radial-gradient(ellipse at 90% 100%, rgba(60,8,45,.28), transparent 50%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.012 .02' numOctaves='3' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .62  0 0 0 0 .12  0 0 0 0 .42  0 0 0 .38 0'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>"),
+    linear-gradient(180deg, #24060f, #07010a);
+  background-blend-mode: normal, normal, soft-light, normal;
+}
+
+.panel-head { display: flex; align-items: baseline; justify-content: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
+.panel-title {
+  margin: 0; font-family: "Anton", Impact, sans-serif; font-weight: 400; font-size: 22px; letter-spacing: .18em;
+  color: var(--gold);
+  text-shadow: 0 1px 0 var(--gold-hi), 0 2px 0 var(--gold-lo), 0 3px 0 #000, 0 5px 8px rgba(0,0,0,.8);
+}
+.panel-sub, .panel-foot { color: var(--muted); font-size: 13px; letter-spacing: .04em; margin: 0; }
+.panel-foot { margin-top: 6px; text-transform: uppercase; font-size: 12px; }
+.map-panel .panel-foot { margin-top: 22px; }
+.unodc-foot { text-transform: none; font-size: 11px; line-height: 1.4; letter-spacing: .02em; color: #8f8a78; }
+
+.legend { display: flex; align-items: center; gap: 10px; font-family: "Anton", Impact, sans-serif; font-size: 12px; letter-spacing: .12em; color: var(--gold-hi); }
+.legend-bar {
+  display: inline-block; width: 200px; height: 12px;
+  border: 1px solid #000; box-shadow: 0 0 0 1px var(--gold-lo), inset 0 1px 0 rgba(255,255,255,.5);
+  /* filled by JS from the same colour scale */
+}
+.legend-ticks { display: flex; justify-content: space-between; width: 200px; font-size: 10px; color: var(--muted); margin-top: -8px; }
+
+/* ---------- svg ---------- */
+.map-wrap, .time-wrap { position: relative; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+#map { aspect-ratio: 975 / 610; }
+#timeline { aspect-ratio: 480 / 560; }
+.grid { stroke: var(--gold); stroke-opacity: .18; stroke-width: 1; }
+.ylab { text-anchor: end; }
+
+.state { fill: #0f2819; stroke: #000; stroke-width: .5; }
+.borders { fill: none; stroke: var(--gold); stroke-width: .55; stroke-opacity: .55; }
+.outline { fill: none; stroke: var(--gold); stroke-width: 1.4; }
+.outline-hi { fill: none; stroke: var(--gold-hi); stroke-width: .6; stroke-opacity: .7; transform: translate(-.8px,-.8px); }
+
+.dot { cursor: pointer; transition: opacity .18s ease; }
+.dot .core { stroke: #000; stroke-width: .8; }
+.dot .spec { pointer-events: none; }
+.dot .ring { fill: none; stroke: #fff; stroke-width: 1.4; opacity: 0; pointer-events: none; }
+.dot .core, .dot .spec, .dot .ring { transform-box: fill-box; transform-origin: center; transition: transform .16s ease, opacity .16s ease; }
+svg.has-hot .dot:not(.hot) { opacity: .28; }
+.dot.hot .core, .dot.hot .spec { transform: scale(1.9); }
+.dot.hot .ring { opacity: 1; transform: scale(2.4); filter: url(#glow); }
+.dot.hot { opacity: 1; }
+.dot.pinned .ring { stroke: var(--gold-hi); }
+
+/* UNODC's US wholesale average: a chrome benchmark laid under the bars, never competing with them */
+.unodc { pointer-events: none; }
+.unodc-shadow { fill: none; stroke: #000; stroke-width: 3.6; stroke-opacity: .45; stroke-linecap: round; stroke-linejoin: round; }
+.unodc-line { fill: none; stroke: var(--chrome-mid); stroke-width: 1.6; stroke-opacity: .62; stroke-dasharray: 6 4; stroke-linecap: round; stroke-linejoin: round; }
+.unodc-cap { fill: var(--chrome-mid); fill-opacity: .55; stroke: #000; stroke-width: .8; }
+.unodc-swatch { stroke: var(--chrome-mid); stroke-width: 1.8; stroke-opacity: .5; stroke-dasharray: 6 4; }
+.unodc-key { font-family: "Oswald", sans-serif; font-weight: 600; font-size: 9px; fill: var(--chrome-mid); letter-spacing: .1em; }
+.unodc-key.sub { font-weight: 400; font-size: 8.5px; fill: var(--muted); fill-opacity: .8; letter-spacing: .07em; }
+svg.has-hot .unodc { opacity: .3; }
+
+.axis { stroke: url(#chromeLine); stroke-width: 3; }
+.axis-shadow { stroke: #000; stroke-width: 5; opacity: .8; }
+.tick { stroke: var(--gold); stroke-width: 1; }
+.yr { font-family: "Anton", Impact, sans-serif; font-size: 11px; fill: var(--gold); letter-spacing: .06em; text-anchor: middle; }
+.yr.minor { fill: var(--gold-lo); font-size: 9px; }
+.count { font-family: "Oswald", sans-serif; font-size: 9px; fill: var(--muted); text-anchor: middle; }
+
+.gbox-rect { fill: rgba(0,0,0,.55); stroke: var(--gold); stroke-width: 1.6; }
+.gbox-rect-in { fill: none; stroke: var(--gold-hi); stroke-width: .5; stroke-opacity: .6; }
+.gbox-title { font-family: "Anton", Impact, sans-serif; font-size: 13px; fill: var(--gold); letter-spacing: .2em; }
+.gbox-label { font-family: "Oswald", sans-serif; font-weight: 600; font-size: 10px; fill: var(--paper); letter-spacing: .08em; }
+.gbox-note { font-family: "Oswald", sans-serif; font-size: 8.5px; fill: var(--muted); letter-spacing: .06em; }
+
+/* ---------- the card ---------- */
+.card {
+  position: fixed; z-index: 50; width: min(380px, calc(100vw - 24px));
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(230,180,34,.18), transparent 45%),
+    linear-gradient(180deg, #0e0f0c, #050605);
+  color: var(--paper);
+  border: 4px ridge var(--gold);
+  outline: 1px solid #000;
+  box-shadow: inset 0 0 0 1px rgba(255,235,160,.4), 0 14px 40px rgba(0,0,0,.9), 0 0 30px rgba(230,180,34,.18);
+  padding: 12px 14px 12px;
+  pointer-events: none;
+  font-size: 14px;
+}
+.card.pinned { pointer-events: auto; }
+.card.pinned .card-links a { pointer-events: auto; }
+/* optional photo: sits top-right, header text wraps beside it */
+.card-photo {
+  float: right; width: 108px; height: 108px; object-fit: cover; margin: 0 0 8px 12px;
+  border: 3px ridge var(--gold); outline: 1px solid #000; box-shadow: 0 4px 10px rgba(0,0,0,.8);
+  filter: saturate(1.15) contrast(1.05);
+}
+.card.has-photo .card-top { flex-direction: column; align-items: flex-start; gap: 6px; }
+.card.has-photo .price { font-size: 34px; white-space: nowrap; }
+.card.has-photo .year-badge { transform: rotate(-2deg); margin-left: 2px; }
+.card.has-photo .year-badge { font-size: 13px; }
+.card .quote { clear: both; }
+.card-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.price {
+  font-family: "Anton", Impact, sans-serif; font-size: 40px; line-height: 1;
+  background: linear-gradient(180deg, #fff8d6 0%, #ffe680 25%, #b8860b 52%, #ffe27a 58%, #a86f00 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(1px 2px 0 #000) drop-shadow(0 4px 8px rgba(0,0,0,.9));
+  letter-spacing: .01em;
+}
+.price small { font-size: 14px; letter-spacing: .12em; }
+.price .cap {
+  display: inline-block; font-size: 13px; margin-left: 6px; opacity: .28; transform: rotate(-14deg) translateY(-8px);
+  color: #fff; -webkit-text-fill-color: #fff; transition: opacity .3s; cursor: help;
+}
+.card:hover .price .cap { opacity: .7; }
+.year-badge {
+  font-family: "Anton", Impact, sans-serif; font-size: 15px; white-space: nowrap; letter-spacing: .04em; color: #000; padding: 2px 8px;
+  background: linear-gradient(180deg, #f4f6f7, #c9ced2);
+  border: 1px solid #000; box-shadow: 0 2px 0 #000, inset 0 1px 0 rgba(255,255,255,.8);
+  transform: rotate(-3deg);
+}
+.who { margin: 8px 0 2px; font-family: "Anton", Impact, sans-serif; font-size: 17px; letter-spacing: .05em; color: var(--gold-hi); text-shadow: 0 1px 0 #000, 0 2px 4px rgba(0,0,0,.8); }
+.who .perf { color: var(--muted); font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: .1em; margin-left: 6px; }
+.song { color: var(--muted); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+.quote {
+  margin: 10px 0; padding: 8px 10px 8px 12px;
+  font-family: "Times New Roman", Times, serif; font-weight: 700; font-style: italic; font-size: 17px; line-height: 1.3;
+  color: #fff;
+  border-left: 3px solid var(--gold);
+  background: linear-gradient(90deg, rgba(230,180,34,.12), transparent);
+  text-shadow: 0 1px 0 #000;
+}
+.meta { display: flex; flex-wrap: wrap; gap: 5px 6px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.chip { padding: 1px 6px; border: 1px solid var(--gold-lo); color: var(--gold-hi); background: rgba(0,0,0,.5); }
+.chip.kind-sell { border-color: #3fbf6b; color: #9cf2b8; }
+.chip.kind-buy { border-color: #e8a13a; color: #ffd48a; }
+.chip.kind-quoted { border-color: #8fa3ad; color: #d7e0e5; }
+.chip.inferred { border-style: dashed; color: var(--muted); }
+.placed b { font-family: "Anton", Impact, sans-serif; font-weight: 400; letter-spacing: .12em; color: var(--gold); font-size: 11px; }
+.placed a { pointer-events: inherit; }
+.chip.flag { border-color: var(--red); color: #ffb3bb; }
+.chip.conf-low { border-color: var(--red); color: #ffb3bb; }
+.chip.conf-medium { color: var(--muted); }
+.fx { color: var(--muted); font-size: 11px; letter-spacing: .06em; }
+.annot { margin: 10px 0 0; font-size: 12.5px; color: #d9d3bd; line-height: 1.4; }
+.annot b { font-family: "Anton", Impact, sans-serif; font-weight: 400; letter-spacing: .12em; color: var(--gold); font-size: 11px; }
+.annot .votes { color: var(--muted); }
+.note { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+.when i { color: var(--paper); font-style: italic; }
+.card-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.card-links a {
+  font-family: "Anton", Impact, sans-serif; font-size: 12px; letter-spacing: .14em; color: #000;
+  padding: 5px 10px; border: 1px solid #000; border-bottom: 0;
+  background: linear-gradient(180deg, #fff2b3, #e6b422 45%, #a86f00 55%, #ffd45c 100%);
+  box-shadow: 0 2px 0 #000, 0 3px 6px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.7);
+  opacity: .55;
+}
+.card.pinned .card-links a { opacity: 1; }
+.card-links a:hover { filter: brightness(1.12); transform: translateY(-1px); }
+.card-hint { margin: 8px 0 0; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.card.pinned .card-hint { color: var(--gold); }
+.card-close {
+  position: absolute; top: -14px; right: -14px; width: 28px; height: 28px; border-radius: 50%;
+  border: 2px solid #000; background: linear-gradient(180deg, #fff2b3, #e6b422 50%, #a86f00);
+  color: #000; font: 700 16px/24px Arial, sans-serif; text-align: center; cursor: pointer; display: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.7);
+}
+.card.pinned .card-close { display: block; }
+
+/* ---------- about / footer ---------- */
+.about-panel p { margin: 4px 0; color: #d9d3bd; }
+.about-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 26px; color: #d9d3bd; }
+.about-cols p { margin: 8px 0; }
+.about-cols em { color: var(--gold-hi); font-style: normal; font-weight: 600; }
+.about-links { margin: 10px 0 0; font-size: 13px; letter-spacing: .04em; color: var(--muted); }
+
+/* touch: bigger hit areas, map scrolls sideways at a size you can actually tap */
+.dot .hit { fill: #000; fill-opacity: 0; }
+@media (pointer: coarse) { .dot .hit { r: 11px; } }
+@media (max-width: 700px) {
+  .map-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -6px; padding: 0 6px; }
+  #map { min-width: 820px; }
+  #timeline .dot .core, #timeline .dot .spec, #timeline .dot .ring { r: 5.5px; }
+  #timeline { aspect-ratio: 480 / 420; }
+  .masthead { padding: 14px 12px 2px; }
+  .note-line { font-size: 13px; gap: 10px; }
+  .title { font-size: 32px; }
+  .legend { font-size: 11px; }
+  .card { left: 12px !important; right: 12px; bottom: 12px; top: auto !important; width: auto; max-height: 60vh; overflow: auto; }
+  .card-close { top: 6px; right: 6px; }
+  .legend-bar { width: 120px; }
+  .panel { padding: 12px 10px 10px; }
+  body { font-size: 14px; }
+}

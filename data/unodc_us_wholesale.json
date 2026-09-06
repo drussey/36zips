@@ -1,0 +1,25 @@
+{
+  "title": "Cocaine wholesale prices in the United States, in US$ per kilogram",
+  "series": "Average, in US$ (nominal, not inflation-adjusted)",
+  "unit": "usd_per_kg",
+  "source": "UNODC, World Drug Report 2026, Statistical Annex, table 8.3 \"Price time series in Western Europe and the United States\", sheet Cocaine_US, row \"Average, in US$\"",
+  "source_note": "UNODC calculations based on UNODC Annual Report Questionnaire (ARQ) data.",
+  "source_url": "https://www.unodc.org/documents/data-and-analysis/WDR_2026/Annex/8.3_price_time_series_in_western_europe_and_united_states.xlsx",
+  "annex_url": "https://www.unodc.org/unodc/en/data-and-analysis/world-drug-report-2026-annex.html",
+  "retrieved": "2026-09-03",
+  "coverage": "1990-2021. UNODC has not published a US wholesale figure after 2021; the 2026 annex ends at the same year as the 2025 annex.",
+  "caveats": [
+    "A single national average per year. UNODC's own country table gives the 2018 US range as $4,000-$45,000/kg, so the spread behind this line is enormous.",
+    "Not adjusted for purity. The annex carries a purity-adjusted series for retail only, not for wholesale.",
+    "Member-state self-report via the ARQ, so year-to-year jumps can be reporting artefacts rather than market moves (e.g. the 2011 spike to $40,800)."
+  ],
+  "prices_usd_per_kg": {
+    "1990": 48300, "1991": 48100, "1992": 44730, "1993": 42180, "1994": 38640,
+    "1995": 35700, "1996": 34320, "1997": 31960, "1998": 30870, "1999": 29580,
+    "2000": 21500, "2001": 23000, "2002": 21500, "2003": 22066, "2004": 20500,
+    "2005": 20500, "2006": 26500, "2007": 31000, "2008": 26500, "2009": 28250,
+    "2010": 30750, "2011": 40800, "2012": 29000, "2013": 28750, "2014": 29000,
+    "2015": 28250, "2016": 28000, "2017": 28000, "2018": 26000, "2019": 29000,
+    "2020": 29750, "2021": 30500
+  }
+}

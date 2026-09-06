@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>36 Zips — The Price of a Kilo According to Rap</title>
+<meta name="description" content="Every price a rapper has put on a kilo, 1992–2026, sourced from Genius lyrics and mapped by hometown.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Pirata+One&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="note-line">The price of a kilo, according to rap. <span id="dek"></span></p>
+</header>
+
+<main>
+  <section class="panel map-panel">
+    <div class="panel-head">
+      <h2 class="panel-title">THE MAP</h2>
+      <div class="legend" id="legend">
+        <span class="legend-label">CHEAP</span>
+        <span class="legend-bar"></span>
+        <span class="legend-label">STEEP</span>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <svg id="map" role="img" aria-label="Map of the United States with a dot for each rap lyric that prices a kilo, placed by the rapper's home city"></svg>
+    </div>
+    <p class="panel-foot">Hover a dot. Click to pin it.</p>
+  </section>
+
+  <section class="panel time-panel">
+    <div class="panel-head">
+      <h2 class="panel-title">THE YEARS</h2>
+    </div>
+    <div class="time-wrap">
+      <svg id="timeline" role="img" aria-label="Price of a kilo by year, one dot per lyric"></svg>
+    </div>
+  </section>
+
+  <section class="panel about-panel">
+    <p>One dot per lyric that puts a dollar figure on a kilo of cocaine, placed on the rapper's home city and the song's release date. Pulled from Genius and checked by hand. A bar is a boast, not a market report.</p>
+    <p class="about-links">Data: <a href="../data/kilo_prices.csv">csv</a> · <a href="../data/kilo_prices.json">json</a> · <a href="../README.md">how it was built</a></p>
+  </section>
+</main>
+
+
+
+<div id="card" class="card" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
