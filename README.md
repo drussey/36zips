@@ -49,7 +49,9 @@ Aggregates in `site_data.json` exclude `profit`, anything flagged `outlier`, and
 - Worldwide inset (bottom-left of the map) holds the UK, Canada, Ireland, France, and any entries with no known city. Alaska and Hawaii have no entries.
 - Chart below the map: release date across, dollars per kilo up, one dot per lyric, same colours. Prices above $50K sit on the top line.
 - Behind that chart, a dashed chrome line: UNODC's average US wholesale price of a kilo, from `data/unodc_us_wholesale.json` (World Drug Report statistical annex 8.3, sheet `Cocaine_US`, row "Average, in US$"). Nominal, like the lyrics, so the two sit on the same footing. Keyed on the chart, sourced in the note under it.
-- Hover any dot to highlight its twin on the other chart and show the card (price, date, artist, song, quote, city, Genius annotation, links). Click to pin the card so the links are clickable; Esc or click away releases. A pinned card sets `#e<id>` in the URL, so every bar has a shareable link.
+- Hover any dot to highlight its twin on the other chart and show the card (price, date, artist, song, quote, city, Genius annotation, links). Click to pin the card so the links are clickable; Esc or click away releases. A pinned card sets `#e<id>` in the URL, so every bar has a shareable link. Left/right arrow keys step through the lyrics by date.
+- On touch screens there is no hover: a tap within a fingertip of a dot opens it, and a tap on a cluster opens a list of everything under the finger (date order) to pick from. The card is a bottom sheet with previous/next (or swipe sideways) that steps through the current set: the whole timeline by date, or the tapped city on the map. The counter in the sheet's bar reopens the list.
+- Phones (≤700px) lead with the timeline, since it is the portrait-shaped chart, and show the map full width underneath; the worldwide inset becomes a row of tappable chips under the map.
 
 Rebuild `site/data.js` after changing the data:
 

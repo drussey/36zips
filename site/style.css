@@ -192,10 +192,13 @@ svg.has-hot .unodc { opacity: .3; }
   border: 4px ridge var(--gold);
   outline: 1px solid #000;
   box-shadow: inset 0 0 0 1px rgba(255,235,160,.4), 0 14px 40px rgba(0,0,0,.9), 0 0 30px rgba(230,180,34,.18);
-  padding: 12px 14px 12px;
+  padding: 0;
   pointer-events: none;
   font-size: 14px;
+  display: flex; flex-direction: column; max-height: calc(100vh - 24px);
 }
+.card[hidden] { display: none !important; }
+.card-body { padding: 12px 14px 12px; min-height: 0; overflow: auto; overscroll-behavior: contain; }
 .card.pinned { pointer-events: auto; }
 .card.pinned .card-links a { pointer-events: auto; }
 /* optional photo: sits top-right, header text wraps beside it */
@@ -272,10 +275,69 @@ svg.has-hot .unodc { opacity: .3; }
 .card-close {
   position: absolute; top: -14px; right: -14px; width: 28px; height: 28px; border-radius: 50%;
   border: 2px solid #000; background: linear-gradient(180deg, #fff2b3, #e6b422 50%, #a86f00);
-  color: #000; font: 700 16px/24px Arial, sans-serif; text-align: center; cursor: pointer; display: none;
+  color: #000; font: 700 16px/24px Arial, sans-serif; text-align: center; cursor: pointer; display: none; z-index: 3;
   box-shadow: 0 2px 6px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.7);
 }
 .card.pinned .card-close { display: block; }
+
+/* step bar: prev / "3 of 45 · Atlanta" / next. Touch and narrow screens only; the mouse has hover for browsing. */
+.card-bar {
+  display: none; align-items: center; gap: 8px; padding: 8px 44px 8px 10px;
+  border-bottom: 1px solid rgba(230,180,34,.35); background: rgba(0,0,0,.4);
+}
+.card-bar .nav {
+  font-family: "Anton", Impact, sans-serif; font-size: 16px; line-height: 1; letter-spacing: .02em; color: #000; cursor: pointer;
+  padding: 7px 14px; border: 1px solid #000;
+  background: linear-gradient(180deg, #fff2b3, #e6b422 45%, #a86f00 55%, #ffd45c 100%);
+  box-shadow: 0 2px 0 #000, inset 0 1px 0 rgba(255,255,255,.7);
+}
+.card-bar .nav:active { transform: translateY(1px); box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255,255,255,.7); }
+.card-bar .where {
+  flex: 1; min-width: 0; text-align: center; background: none; border: 0; box-shadow: none; padding: 6px 2px; cursor: pointer;
+  font-family: "Anton", Impact, sans-serif; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  text-shadow: 0 1px 0 #000, 0 2px 4px rgba(0,0,0,.8);
+}
+@media (pointer: coarse), (max-width: 700px) { .card.pinned .card-bar { display: flex; } }
+
+/* several lyrics under one finger: pick from a list */
+.chooser { list-style: none; margin: 0; padding: 0; }
+.chooser li + li { border-top: 1px dotted var(--gold-lo); }
+.chooser .row {
+  display: grid; grid-template-columns: 12px auto 1fr auto; grid-template-rows: auto auto; gap: 3px 9px; align-items: baseline;
+  width: 100%; padding: 9px 2px 10px; background: none; border: 0; color: var(--paper); font: inherit; text-align: left; cursor: pointer;
+}
+.chooser .row:active { background: rgba(230,180,34,.1); }
+.chooser .sw {
+  align-self: center; width: 12px; height: 12px; border-radius: 50%; border: 1px solid #000;
+  box-shadow: inset 2px 2px 3px rgba(255,255,255,.55), inset -1px -1px 2px rgba(0,0,0,.5);
+}
+.chooser .rp {
+  font-family: "Anton", Impact, sans-serif; font-size: 19px; line-height: 1;
+  background: linear-gradient(180deg, #fff8d6 0%, #ffe680 25%, #b8860b 52%, #ffe27a 58%, #a86f00 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 1px 0 #000);
+}
+.chooser .rw { font-family: "Anton", Impact, sans-serif; font-size: 14px; letter-spacing: .04em; color: var(--gold-hi); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chooser .rw .perf { color: var(--muted); font-family: "Oswald", sans-serif; font-size: 11px; letter-spacing: .08em; margin-left: 5px; }
+.chooser .ry { font-size: 12px; letter-spacing: .06em; color: var(--muted); white-space: nowrap; }
+.chooser .ry .rc { text-transform: uppercase; font-size: 10.5px; letter-spacing: .08em; }
+.chooser .rq {
+  grid-column: 2 / -1; font-family: "Times New Roman", Times, serif; font-style: italic; font-size: 14px; line-height: 1.3; color: #fff;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; opacity: .9;
+}
+
+/* abroad + undisclosed as chips under the map on phones; on wide screens the inset box does this job */
+.world-chips { display: none; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.wchip {
+  font-family: "Anton", Impact, sans-serif; font-size: 12px; letter-spacing: .1em; color: var(--gold-hi); cursor: pointer;
+  padding: 6px 10px; border: 1px solid var(--gold-lo); background: rgba(0,0,0,.5); box-shadow: inset 0 0 0 1px rgba(255,235,160,.12);
+}
+.wchip b { font-weight: 400; color: var(--gold); margin-left: 7px; }
+.wchip:active { background: rgba(230,180,34,.15); }
+.time-hint { display: none; }
+
+@media (min-width: 1000px) { .card { max-height: calc(100vh / 1.1 - 24px); } } /* body is zoomed 1.1 there and vh ignores the zoom */
 
 /* ---------- about / footer ---------- */
 .about-panel p { margin: 4px 0; color: #d9d3bd; }
@@ -284,21 +346,44 @@ svg.has-hot .unodc { opacity: .3; }
 .about-cols em { color: var(--gold-hi); font-style: normal; font-weight: 600; }
 .about-links { margin: 10px 0 0; font-size: 13px; letter-spacing: .04em; color: var(--muted); }
 
-/* touch: bigger hit areas, map scrolls sideways at a size you can actually tap */
+/* touch: taps are matched by distance in app.js, so no fat hit circles; no per-dot transitions either (460 of them per tap) */
 .dot .hit { fill: #000; fill-opacity: 0; }
-@media (pointer: coarse) { .dot .hit { r: 11px; } }
+#map, #timeline, .card, .wchip { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+@media (pointer: coarse) {
+  .dot, .dot .core, .dot .spec, .dot .ring { transition: none; }
+}
+/* phones: the timeline leads (it is the portrait-shaped chart), the map is full width, the card is a bottom sheet */
 @media (max-width: 700px) {
-  .map-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -6px; padding: 0 6px; }
-  #map { min-width: 820px; }
-  #timeline .dot .core, #timeline .dot .spec, #timeline .dot .ring { r: 5.5px; }
-  #timeline { aspect-ratio: 480 / 420; }
+  body { font-size: 14px; }
   .masthead { padding: 14px 12px 2px; }
   .note-line { font-size: 13px; gap: 10px; }
   .title { font-size: 32px; }
+  main { display: flex; flex-direction: column; padding: 14px 6px 24px; }
+  .time-panel { order: -1; }
+  .panel { padding: 10px 8px 10px; margin-bottom: 18px; }
+  .panel-head { margin-bottom: 4px; }
   .legend { font-size: 11px; }
-  .card { left: 12px !important; right: 12px; bottom: 12px; top: auto !important; width: auto; max-height: 60vh; overflow: auto; }
-  .card-close { top: 6px; right: 6px; }
   .legend-bar { width: 120px; }
-  .panel { padding: 12px 10px 10px; }
-  body { font-size: 14px; }
+
+  .map-wrap { margin: 0; padding: 0; }
+  #map .dot .core, #map .dot .spec, #map .dot .ring { r: 7.5px; }
+  .gbox { display: none; }
+  .world-chips { display: flex; }
+  .map-panel .tap-hint { display: none; } /* the timeline, first on phones, carries the hint */
+
+  #timeline .dot .core, #timeline .dot .spec, #timeline .dot .ring { r: 6px; }
+  .yr { font-size: 14px; }
+  .unodc-key, .unodc-swatch { display: none; }
+  .time-hint { display: block; margin-top: 10px; }
+  .unodc-foot { margin-top: 6px; }
+
+  .card {
+    left: 8px !important; right: 8px; top: auto !important; bottom: max(8px, env(safe-area-inset-bottom));
+    width: auto;
+    max-height: 72vh; max-height: min(72dvh, calc(100dvh - 72px));
+  }
+  .card-body { padding: 10px 12px 12px; padding-bottom: calc(12px + env(safe-area-inset-bottom)); }
+  .card-photo { width: 88px; height: 88px; margin: 0 0 6px 10px; }
+  .card.has-photo .price { font-size: 30px; }
+  .card-close { top: 6px; right: 6px; }
 }
