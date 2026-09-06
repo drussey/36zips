@@ -71,7 +71,7 @@ add(2013,"Meek Mill","I'm Leanin'",None,"Got birds for the twenty five K",25,"qu
 add(2013,"Tracy T","16",None,"Whole thing for 33, that's Patrick Ewing nigga",33,"sell","USD","Atlanta, GA")
 add(2013,"Waka Flocka Flame","Fast Forward","Waka Flocka Flame","The bricks go for 35, that's KD",35,"sell","USD","Atlanta, GA")
 add(2013,"Waka Flocka Flame","Murda She Wrote",None,"I'm 'bout to up the price / 65,000 for a brick of white",65,"sell","USD","Atlanta, GA","medium")
-add(2013,"Wale","Bricks",None,"Now 16, getting them bricks for the 16",16,"buy","USD",None,"medium",["wordplay"])
+add(2013,"Wale","Bricks",None,"Now 16, getting them bricks for the 16",16,"buy","USD","Washington, DC","medium",["wordplay"])
 add(2013,"SBOE","Money Cars Clothes",None,"I fronted 2, charging 45 each brick",45,"sell","USD","Queens, NY","medium")
 add(2013,"Joey Fatts","PushaMan",None,"Five for the O and fifteen for the whole thing",15,"sell","USD","Long Beach, CA")
 add(2014,"O.T. Genasis","Funk Flex Freestyle","O.T. Genasis","Plug said, \"Thirty for a brick now\"",30,"buy","USD","Long Beach, CA")
@@ -104,7 +104,7 @@ add(2019,"Leeky Bandz","Picasso",None,"It's thirty-five for a brick",35,"quoted"
 add(2019,"OJ da Juiceman","Bricks & Pots","OJ da Juiceman","36 cost 30 flat, chopping bricks like lumberjacks",30,"buy","USD","Atlanta, GA")
 add(2019,"Peso Peso","Da Bottom","Peso Peso","Got it for twenty-five, then I charge thirty for the brick",30,"sell","USD","Houston, TX",note="buys at 25, sells at 30")
 add(2019,"Stack Bundles","Stand Up","Stack Bundles","Twenty-two a brick, twenty-two on whips",22,"quoted","USD","Queens, NY","medium",["posthumous"],"Stack Bundles died in 2007; recorded before then")
-add(2019,"Westside Gunn","Never Give Up",None,"Used to pay eighteen-five for the whole thing",18.5,"buy","USD",None,"high",["retrospective"])
+add(2019,"Westside Gunn","Never Give Up",None,"Used to pay eighteen-five for the whole thing",18.5,"buy","USD","Buffalo, NY","high",["retrospective"])
 add(2019,"Cookie Money","No Forfeit","Cookie Money","Twenty dollars for a solid, 30 thousand a key",30,"quoted","USD","Oakland, CA")
 # ---- 2020s
 add(2020,"Westside Gunn","Allah Sent Me",None,"Ayo, I miss the days when bricks was only nineteen",19,"quoted","USD","Buffalo, NY","high",["retrospective"])
@@ -225,7 +225,7 @@ add(2007,"Gucci Mane","Truck Loaded","Gucci Mane","Eighteen bands, I done sold a
 add(2016,"Snap Capone","Pay 4 It / Picture Me Rolling","Snap Capone","Charge thirty for a key, that's the price of my watch",30,"sell","GBP","London, UK","medium")  # https://genius.com/Snap-capone-pay-4-it-picture-me-rolling-lyrics
 add(2019,"Fee Gonzales","Slatt","Fee Gonzales","I just paid like 40 for the brick",40,"buy","GBP","London, UK","medium")  # https://genius.com/Fee-gonzales-slatt-lyrics
 add(2013,"Doughboyz Cashout","Numbers",None,"2 for 60 for the bricks",30,"sell","USD","Detroit, MI","medium",["derived"],"2 for 60 => 30 per brick")  # https://genius.com/Doughboyz-cashout-numbers-lyrics
-add(2014,"Smerker","Stars In The Wraith (Remix)",None,"Thirty on my wrist, wan' pay thirty for a brick",30,"buy","GBP","London, UK","medium")  # https://genius.com/Smerker-stars-in-the-wraith-remix-lyrics
+add(2018,"Smerker","Stars In The Wraith (Remix)",None,"Thirty on my wrist, wan' pay thirty for a brick",30,"buy","GBP","London, UK","medium")  # https://genius.com/Smerker-stars-in-the-wraith-remix-lyrics
 add(2006,"Styles P","Institutionalized","Styles P","Twenty for a brick, but if you caught, it's twenty-five",20,"quoted","USD","Yonkers, NY","high",note="25 is the sentence in years, not a price")  # https://genius.com/Styles-p-institutionalized-lyrics
 add(2001,"E.S.G. & Slim Thug","Mash For Our Cash",None,"Sixteen-five for a bird, so nigga quit hating",16.5,"sell","USD","Houston, TX")  # https://genius.com/Esg-tx-and-slim-thug-mash-for-our-cash-lyrics
 add(2023,"GooseByTheWay, SK Da King, 7xvethegenius & Lucky Seven","Take It Back",None,"Before niggas started payin' thirty for a whole thing",30,"buy","USD","Buffalo, NY","medium",["implied_unit","retrospective"],"'whole thing' = kilo; line looks back to before fentanyl")  # https://genius.com/Goosebytheway-sk-da-king-7xvethegenius-and-lucky-seven-take-it-back-lyrics
@@ -244,7 +244,7 @@ add(2020,"Zaytoven","EA LEGENDS",None,"No more pain, sold the bricks for twenty-
 add(2020,"Ice City","Street Therapy",None,"Re-up on the brick, that's thirty-six, half a brick, eighteen",36,"buy","GBP","London, UK","medium",note="36 read as price since the half is priced at 18")  # https://genius.com/Ice-city-street-therapy-lyrics
 add(2019,"Corleone (UK)","Poor Little Rich Kid",None,"Heard that sniff shit, 35 a brick prick",35,"quoted","GBP","London, UK","medium",note="Snap Capone features, check who raps the line")  # https://genius.com/Corleone-uk-poor-little-rich-kid-lyrics
 add(2016,"Lil Pump","30 Bitches (2016)","Lil Pump","Forty thousand on a brick",40,"quoted","USD","Miami, FL","medium",note="year from title; confirm on Genius")  # https://genius.com/Lil-pump-30-bitches-2016-lyrics
-add(2016,"Chubbie Baby","Thank the Plug",None,"Brick at 15 and a half / Now a half a brick cost you 15 and a half",15.5,"buy","USD","Atlanta, GA","medium",["retrospective"],"line contrasts old price (15.5 per brick) with now (15.5 per half => 31); old price used, consider a second derived row at 31")  # https://genius.com/Chubbie-baby-thank-the-plug-lyrics
+add(2016,"Chubbie Baby","Thank the Plug",None,"Brick at 15 and a half / Now a half a brick cost you 15 and a half",15.5,"buy","USD","Bronx, NY","medium",["retrospective"],"line contrasts old price (15.5 per brick) with now (15.5 per half => 31); old price used, consider a second derived row at 31")  # https://genius.com/Chubbie-baby-thank-the-plug-lyrics
 add(2017,"Snap Capone","Man Down","Snap Capone","I'm in the hood where the bricks go for thirty",30,"quoted","GBP","London, UK","medium")  # https://genius.com/Snap-capone-man-down-lyrics
 add(2005,"D-Block","Yayo","Jadakiss","Your bricks cost 24, mine 60 something",24,"quoted","USD","Yonkers, NY","medium",note="24 taken as the market price; 60 is a boast about his own being uncut")  # https://genius.com/D-block-yayo-lyrics
 add(2020,"Geny Luv","Oak",None,"On my shit thirty dollars on a brick",30,"quoted","USD",None,"low",["implied_unit"],"'thirty dollars' read as 30K")  # https://genius.com/Geny-luv-oak-lyrics
@@ -253,6 +253,10 @@ add(2024,"Victor Rashad","Wartime Ready","Victor Rashad","I wanna break down a b
 add(2012,"AR-AB","North 2 West","AR-AB","Bring 32 grand if you need a brick",32,"sell","USD","Philadelphia, PA","high")  # https://genius.com/Ar-ab-north-2-west-lyrics
 add(2018,"Dion Lekeith","How You Trying to Roll","Bobby Gore","Got me feeling like a key / 30 grand I'll pay the fee",30,"quoted","USD",None,"low",["implied_unit","wordplay"],"30 grand is 'the fee' in a rhyme with 'key'; kilo price by association only")  # https://genius.com/Dion-lekeith-how-you-trying-to-roll-lyrics
 add(2018,"JayDaYoungan","Wake Up","JayDaYoungan","Stepped out and I look like a brick / Thirty bands, I put that on my wrist",30,"quoted","USD","Bogalusa, LA","low",["implied_unit","wordplay"],"thirty bands is the watch; equates himself to a brick, so 30 = brick price only by implication")  # https://genius.com/Jaydayoungan-wake-up-lyrics
+# ---- additions from the candidates re-ranked by artist prominence (2026-09-06)
+add(2007,"Gucci Mane","Gucci the Eskimo","Gucci Mane","16 to 22-5, I'm high taxin' / Depends on your tax bracket or your package / 21-5 right now, and I'm happy",21.5,"sell","USD","Atlanta, GA","high",note="full price list: 16-22.5 depending on the buyer, 21.5 is what he is charging now, and the next line says it jumps to 23. Found as a 2025 Sematary remix in the candidates; credited to the 2007 original")  # https://genius.com/Gucci-mane-gucci-the-eskimo-lyrics
+add(1994,"Kokane","Aftermath","KMG the Illustrator","Or do you wanna die for my Kokane that's 17-5 a ki?",17.5,"sell","USD","Pomona, CA",note="KMG of Above the Law raps verse 2; Kokane is the credited artist. Same 17.5 as Kokane's own line on All Bark No Bite, a separate song")  # https://genius.com/Kokane-aftermath-lyrics
+add(2019,"Lil B","BasedWorld Made Man","Lil B","I got two for three / I got the verses and they goin' 25 a key",25,"quoted","USD","Berkeley, CA","low",["wordplay"],"prices his verses in dealer terms; 25 a key is the going kilo rate only by association")  # https://genius.com/Lil-b-basedworld-made-man-lyrics
 
 # ---- locations the lyric itself names
 LYRIC_LOC={

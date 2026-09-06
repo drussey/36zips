@@ -5964,5 +5964,84 @@
     "header": "https://images.genius.com/a6f5419d8c0b3ae0751a5c1f6ebc105b.1000x667x1.jpg"
    }
   ]
+ },
+ "208983": {
+  "title": "Aftermath",
+  "song_art": "https://images.genius.com/e73eb27a7600d8b4d7ea7d1adf27e6ec.1000x1000x1.png",
+  "header": "https://images.genius.com/e73eb27a7600d8b4d7ea7d1adf27e6ec.1000x1000x1.png",
+  "primary": {
+   "id": 1423,
+   "name": "Kokane",
+   "image": "https://images.genius.com/e813eaea3df1f47f58591c97aec530b3.600x600x1.jpg",
+   "header": "https://images.genius.com/010d55a45d1691003cb8ba697de121ed.407x229x1.jpg"
+  },
+  "featured": [
+   {
+    "id": 2105430,
+    "name": "KMG the Illustrator",
+    "image": "https://images.genius.com/6cda255083e16247aead10edbc7cb90b.400x400x1.png",
+    "header": "https://images.genius.com/6cda255083e16247aead10edbc7cb90b.400x400x1.png"
+   },
+   {
+    "id": 5687,
+    "name": "Cold 187um",
+    "image": "https://images.genius.com/82ee5d9b6e8b35766cef93108f3adcb7.552x552x1.png",
+    "header": "https://images.genius.com/df78047d45dd0093d6dfd9fd6cf5a711.540x328x1.jpg"
+   },
+   {
+    "id": 11032,
+    "name": "Dirty Red",
+    "image": "https://images.genius.com/309a3278dc2f3dadc83accf52520cc05.168x168x1.png",
+    "header": "https://images.genius.com/309a3278dc2f3dadc83accf52520cc05.168x168x1.png"
+   }
+  ],
+  "primaries": [
+   {
+    "id": 1423,
+    "name": "Kokane",
+    "image": "https://images.genius.com/e813eaea3df1f47f58591c97aec530b3.600x600x1.jpg",
+    "header": "https://images.genius.com/010d55a45d1691003cb8ba697de121ed.407x229x1.jpg"
+   }
+  ]
+ },
+ "4483483": {
+  "title": "BasedWorld Made Man",
+  "song_art": "https://images.genius.com/0918ebe1beee23da5bdfa28463caf339.640x640x1.jpg",
+  "header": "https://images.genius.com/0918ebe1beee23da5bdfa28463caf339.640x640x1.jpg",
+  "primary": {
+   "id": 455,
+   "name": "Lil B",
+   "image": "https://images.genius.com/34dff064ecd30cedcc715487be6e78e6.395x395x1.jpg",
+   "header": "https://images.genius.com/f2993dee2668494e4b8a7fb70ebe05a7.1000x165x1.jpg"
+  },
+  "featured": [],
+  "primaries": [
+   {
+    "id": 455,
+    "name": "Lil B",
+    "image": "https://images.genius.com/34dff064ecd30cedcc715487be6e78e6.395x395x1.jpg",
+    "header": "https://images.genius.com/f2993dee2668494e4b8a7fb70ebe05a7.1000x165x1.jpg"
+   }
+  ]
+ },
+ "51407": {
+  "title": "Gucci the Eskimo",
+  "song_art": "https://images.genius.com/6e203c7697e3bf7fbb3b1ffb3db72a1b.500x500x1.jpg",
+  "header": "https://images.genius.com/6e203c7697e3bf7fbb3b1ffb3db72a1b.500x500x1.jpg",
+  "primary": {
+   "id": 13,
+   "name": "Gucci Mane",
+   "image": "https://images.genius.com/82117b940dc8deada6f07c7590ca3b5f.978x978x1.jpg",
+   "header": "https://images.genius.com/de090514e8c38dadeac4a335a55f1989.800x1000x1.jpg"
+  },
+  "featured": [],
+  "primaries": [
+   {
+    "id": 13,
+    "name": "Gucci Mane",
+    "image": "https://images.genius.com/82117b940dc8deada6f07c7590ca3b5f.978x978x1.jpg",
+    "header": "https://images.genius.com/de090514e8c38dadeac4a335a55f1989.800x1000x1.jpg"
+   }
+  ]
  }
 }

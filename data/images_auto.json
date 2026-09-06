@@ -349,16 +349,6 @@
   },
   "image": "img/artists/jeezy-67.jpg"
  },
- "Drake|Beautiful Music": {
-  "performer": "Drake",
-  "artist_photo": "img/artists/drake-130.jpg",
-  "song_art": "img/art/1182.jpg",
-  "sources": {
-   "artist_photo": "https://images.genius.com/270ba461d977ad9df0b7facf4f2b38a5.1000x1000x1.webp",
-   "song_art": "https://images.genius.com/270ba461d977ad9df0b7facf4f2b38a5.1000x1000x1.webp"
-  },
-  "image": "img/artists/drake-130.jpg"
- },
  "Gucci Mane|Swing My Door": {
   "performer": "Gucci Mane",
   "artist_photo": "img/artists/gucci-mane-13.jpg",
@@ -1504,12 +1494,13 @@
  },
  "Lantana|All Hustle, No Luck (Remix)": {
   "performer": "Lantana",
-  "artist_photo": null,
+  "artist_photo": "img/artists/lantana-80140.jpg",
   "song_art": "img/art/241322.jpg",
   "sources": {
+   "artist_photo": "https://assets.genius.com/images/default_cover_image.png?1788378605",
    "song_art": "https://images.genius.com/10dc8c2a82cc8237d15dd7ada5deaa70.590x590x1.jpg"
   },
-  "image": "img/art/241322.jpg"
+  "image": "img/artists/lantana-80140.jpg"
  },
  "D. Chamberz|On My 1, 2": {
   "performer": "Fred the Godson",
@@ -2127,14 +2118,13 @@
   "image": "img/artists/cookie-money-93788.jpg"
  },
  "Emoney X JC|prada": {
-  "performer": "Emoney X JC",
-  "artist_photo": "img/artists/emoney-x-jc-2542049.jpg",
+  "performer": "Sir Flex-A-Lot",
+  "artist_photo": null,
   "song_art": "img/art/7853382.jpg",
   "sources": {
-   "artist_photo": "https://images.genius.com/ba5461506081013794b831cd28c47f8b.1000x1000x1.jpg",
    "song_art": "https://images.genius.com/722f2d010c1dc630354cfa35ccd5cf1a.750x750x1.jpg"
   },
-  "image": "img/artists/emoney-x-jc-2542049.jpg"
+  "image": "img/art/7853382.jpg"
  },
  "Lil Lyko|Lean": {
   "performer": "Lil Lyko",
@@ -2155,13 +2145,6 @@
    "song_art": "https://images.genius.com/9a83648fc19ea69619d5b27616892b4f.1000x1000x1.jpg"
   },
   "image": "img/artists/young-scooter-23552.jpg"
- },
- "Buani|Kennedy": {
-  "performer": "Buani",
-  "artist_photo": null,
-  "song_art": null,
-  "sources": {},
-  "image": null
  },
  "Millyz & The Colombians|The Plug Remix": {
   "performer": "Millyz",
@@ -2290,7 +2273,7 @@
   "image": "img/artists/ar-ab-1136.jpg"
  },
  "Dion Lekeith|How You Trying to Roll": {
-  "performer": "Dion Lekeith",
+  "performer": "Bobby Gore",
   "artist_photo": "img/artists/dion-lekeith-281744.jpg",
   "song_art": "img/art/4307638.jpg",
   "sources": {
@@ -2308,5 +2291,35 @@
    "song_art": "https://images.genius.com/8764c99ebd8e25eb53e6e963d558b6ac.1000x1000x1.png"
   },
   "image": "img/artists/jaydayoungan-1123440.jpg"
+ },
+ "Gucci Mane|Gucci the Eskimo": {
+  "performer": "Gucci Mane",
+  "artist_photo": "img/artists/gucci-mane-13.jpg",
+  "song_art": "img/art/51407.jpg",
+  "sources": {
+   "artist_photo": "https://images.genius.com/82117b940dc8deada6f07c7590ca3b5f.978x978x1.jpg",
+   "song_art": "https://images.genius.com/6e203c7697e3bf7fbb3b1ffb3db72a1b.500x500x1.jpg"
+  },
+  "image": "img/artists/gucci-mane-13.jpg"
+ },
+ "Kokane|Aftermath": {
+  "performer": "KMG the Illustrator",
+  "artist_photo": "img/artists/kmg-the-illustrator-2105430.jpg",
+  "song_art": "img/art/208983.jpg",
+  "sources": {
+   "artist_photo": "https://images.genius.com/6cda255083e16247aead10edbc7cb90b.400x400x1.png",
+   "song_art": "https://images.genius.com/e73eb27a7600d8b4d7ea7d1adf27e6ec.1000x1000x1.png"
+  },
+  "image": "img/artists/kmg-the-illustrator-2105430.jpg"
+ },
+ "Lil B|BasedWorld Made Man": {
+  "performer": "Lil B",
+  "artist_photo": "img/artists/lil-b-455.jpg",
+  "song_art": "img/art/4483483.jpg",
+  "sources": {
+   "artist_photo": "https://images.genius.com/34dff064ecd30cedcc715487be6e78e6.395x395x1.jpg",
+   "song_art": "https://images.genius.com/0918ebe1beee23da5bdfa28463caf339.640x640x1.jpg"
+  },
+  "image": "img/artists/lil-b-455.jpg"
  }
 }

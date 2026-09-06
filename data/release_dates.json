@@ -3984,5 +3984,59 @@
   },
   "album_release_display": "July 7, 2023",
   "recording_location": null
+ },
+ "208983": {
+  "title": "Aftermath",
+  "artist": "Kokane (Ft. Cold 187um, Dirty Red & KMG the Illustrator)",
+  "song_release": {
+   "year": 1994,
+   "month": 4,
+   "day": 12
+  },
+  "song_release_display": "April 12, 1994",
+  "album": "Funk Upon a Rhyme",
+  "album_release": {
+   "year": 1994,
+   "month": 4,
+   "day": 12
+  },
+  "album_release_display": "April 12, 1994",
+  "recording_location": null
+ },
+ "4483483": {
+  "title": "BasedWorld Made Man",
+  "artist": "Lil B",
+  "song_release": {
+   "year": 2019,
+   "month": 4,
+   "day": 14
+  },
+  "song_release_display": "April 14, 2019",
+  "album": "28 Wit a Ladder",
+  "album_release": {
+   "year": 2019,
+   "month": 4,
+   "day": 14
+  },
+  "album_release_display": "April 14, 2019",
+  "recording_location": null
+ },
+ "51407": {
+  "title": "Gucci the Eskimo",
+  "artist": "Gucci Mane",
+  "song_release": {
+   "year": 2007,
+   "month": 6,
+   "day": 20
+  },
+  "song_release_display": "June 20, 2007",
+  "album": "Ice Attack 2",
+  "album_release": {
+   "year": 2007,
+   "month": 6,
+   "day": 20
+  },
+  "album_release_display": "June 20, 2007",
+  "recording_location": null
  }
 }
